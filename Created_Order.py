@@ -11,5 +11,5 @@ def get_track():
     track_put = str(track_body.json()['track'])
     return track_put
 
-def search_order():
-    return requests.get(Config.URL_SERVICE + Config.SEARCH_ORDER_PATH + "?t=" + get_track())
+def search_order(track_number):
+    return requests.get(Config.URL_SERVICE + Config.SEARCH_ORDER_PATH + "?t=" + track_number)
